@@ -39,10 +39,18 @@ func main() {
 	// http.HandleFunc("/api/hello", helloAPI)
 	// http.ListenAndServe(":8080", nil)
 
-	db, err := sql.Open("mysql", "asjrf517_ozorasoft_admin:Passw0rd1978@tcp(ozorasoft.ca:3306)/asjrf517_ozorasoft_marketing")
+	dsn := "" // connectionstring for Go
+
+	db, err := sql.Open("mysql", dsn)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	if err := db.Ping(); err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println("Connected!")
 
 	repo := &repositories.ProspectRepository{DB: db}
 	service := &services.ProspectService{Repo: repo}
