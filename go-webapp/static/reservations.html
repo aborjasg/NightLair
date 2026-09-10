@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | NightLair</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/" aria-label="NightLair home"><span class="brand-mark">N</span><span>NightLair</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="/">Home</a><a href="/static/locations.html">Locations</a><a class="active" href="/static/reservations.html">Reservations</a><a href="/static/services.html">Services</a>
+        </nav>
+        <div class="header-actions">
+            <a class="header-action" href="/static/reservations.html">Book Stay <span aria-hidden="true">↗</span></a>
+            <a class="header-signup" href="/static/signup.html">Sign up</a>
+        </div>
+    </header>
+    <main>
+        <section class="page-hero"><img class="hero-image" src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1800&q=85" alt="Luxury bedroom prepared for a stay"><p class="eyebrow">Your next chapter</p><h1>Leave room<br><em>for wonder.</em></h1><p class="page-intro">Tell us where you want to go. We will take care of the rest.</p></section>
+        <section class="calendar-wrap" aria-label="Reservation availability">
+            <div class="calendar-header"><button class="calendar-nav" aria-label="Previous month">←</button><h2>September 2026</h2><button class="calendar-nav" aria-label="Next month">→</button></div>
+            <table class="calendar"><thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead><tbody>
+                <tr><td></td><td></td><td><button class="day unavailable">1</button></td><td><button class="day unavailable">2</button></td><td><button class="day">3</button></td><td><button class="day">4</button></td><td><button class="day">5</button></td></tr>
+                <tr><td><button class="day">6</button></td><td><button class="day">7</button></td><td><button class="day">8</button></td><td><button class="day">9</button></td><td><button class="day">10</button></td><td><button class="day unavailable">11</button></td><td><button class="day unavailable">12</button></td></tr>
+                <tr><td><button class="day">13</button></td><td><button class="day">14</button></td><td><button class="day selected">15</button></td><td><button class="day">16</button></td><td><button class="day">17</button></td><td><button class="day">18</button></td><td><button class="day">19</button></td></tr>
+                <tr><td><button class="day">20</button></td><td><button class="day">21</button></td><td><button class="day">22</button></td><td><button class="day unavailable">23</button></td><td><button class="day unavailable">24</button></td><td><button class="day">25</button></td><td><button class="day">26</button></td></tr>
+                <tr><td><button class="day">27</button></td><td><button class="day">28</button></td><td><button class="day">29</button></td><td><button class="day">30</button></td><td></td><td></td><td></td></tr>
+            </tbody></table>
+            <p class="availability-note">Available dates are shown in charcoal. Crossed-out dates are fully booked.</p>
+        </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 NightLair</span><span>Stay curious. Stay awhile.</span></footer>
+</body>
+</html>

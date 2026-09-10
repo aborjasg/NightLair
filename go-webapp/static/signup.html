@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | NightLair</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/" aria-label="NightLair home"><span class="brand-mark">N</span><span>NightLair</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="/">Home</a>
+            <a href="/static/locations.html">Locations</a>
+            <a href="/static/reservations.html">Reservations</a>
+            <a href="/static/services.html">Services</a>
+        </nav>
+        <div class="header-actions">
+            <a class="header-action" href="/static/reservations.html">Book Stay <span aria-hidden="true">↗</span></a>
+            <a class="header-signup" href="/static/signup.html">Sign up</a>
+        </div>
+    </header>
+    <main>
+        <section class="page-hero">
+            <img class="hero-image" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=85" alt="A guest signing up for a NightLair stay">
+            <p class="eyebrow">Join NightLair</p>
+            <h1>Make yourself<br><em>at home.</em></h1>
+            <div class="signup-panel">
+                <form class="signup-form" onsubmit="saveAccount(event)">
+                    <label>First name<input name="firstName" required autocomplete="given-name"></label>
+                    <label>Last name<input name="lastName" required autocomplete="family-name"></label>
+                    <label>Email address<input type="email" name="email" required autocomplete="email"></label>
+                    <button class="button button-primary" type="submit">Save <span aria-hidden="true">→</span></button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 NightLair</span><span>Stay curious. Stay awhile.</span></footer>
+    <script>
+        function saveAccount(event) {
+            event.preventDefault();
+            alert("Successful saved, soon we'll receive an email to confirm the account");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

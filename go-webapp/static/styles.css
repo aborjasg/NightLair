@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root {
+    --ink: #f7efe5;
+    --muted: #b7ada4;
+    --cream: #f7efe5;
+    --paper: #10131f;
+    --sage: #cf6d26;
+    --deep: #1c2030;
+    --line: rgba(247, 239, 229, .18);
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    color: var(--ink);
+    background: radial-gradient(circle at 80% 0%, #22283b 0, var(--paper) 42%);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+}
+a { color: inherit; text-decoration: none; }
+.site-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 28px 32px;
+}
+.brand { align-items: center; display: flex; font-size: 1.05rem; font-weight: 600; gap: 10px; letter-spacing: -.02em; }
+.brand-mark { align-items: center; background: #f58220; border-radius: 50%; color: #171a27; display: flex; font-family: "Playfair Display", serif; font-size: 1.1rem; height: 34px; justify-content: center; width: 34px; }
+.main-nav { display: flex; gap: 34px; }
+.main-nav a { color: var(--muted); font-size: .8rem; position: relative; }
+.main-nav a:hover, .main-nav a.active { color: var(--ink); }
+.main-nav a.active::after { background: var(--ink); bottom: -8px; content: ""; height: 2px; left: 0; position: absolute; width: 100%; }
+.header-action, .button { border: 1px solid var(--ink); border-radius: 999px; font-size: .78rem; padding: 11px 18px; }
+.header-actions { align-items: center; display: flex; gap: 10px; }
+.header-action { background: #f58220; border-color: #f58220; color: #171a27; transition: background .2s, color .2s; }
+.header-action:hover { background: #ff9e3d; color: #171a27; }
+.header-signup { border: 1px solid var(--line); border-radius: 999px; color: var(--ink); font-size: .78rem; padding: 11px 18px; transition: background .2s, color .2s; }
+.header-signup:hover { background: var(--ink); color: var(--paper); }
+main { margin: 0 auto; max-width: 1240px; padding: 70px 32px 100px; }
+.hero { max-width: 850px; padding: 50px 0 110px; }
+.hero-image { border: 1px solid rgba(247, 239, 229, .18); display: block; height: 270px; margin-bottom: 42px; object-fit: cover; width: 100%; }
+.eyebrow { color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .16em; margin: 0 0 20px; text-transform: uppercase; }
+h1, h2 { font-family: "Playfair Display", serif; font-weight: 500; letter-spacing: -.04em; line-height: 1.03; margin: 0; }
+h1 { font-size: clamp(3.7rem, 8vw, 7.4rem); }
+h1 em { color: #718b7a; }
+.hero-copy { color: var(--muted); font-size: 1rem; margin: 28px 0 30px; max-width: 410px; }
+.hero-actions { align-items: center; display: flex; gap: 20px; }
+.button { display: inline-flex; gap: 22px; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button-primary { background: #f58220; border-color: #f58220; color: #171a27; }
+.button-primary:hover { background: #ff9e3d; }
+.button-quiet { border-color: transparent; color: var(--muted); padding-left: 0; }
+.feature-grid { display: grid; gap: 18px; grid-template-columns: 1.25fr 1fr; }
+.feature-card { display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; padding: 30px; }
+.feature-card-large { background: linear-gradient(135deg, #9d4c20, #e08332); }
+.feature-card-dark { background: var(--deep); color: #fff; }
+.card-number { font-size: .72rem; opacity: .65; }
+.feature-card h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 28px; max-width: 380px; }
+.feature-card-dark .eyebrow, .feature-card-dark .text-link { color: rgba(255,255,255,.65); }
+.text-link { font-size: .8rem; }
+.text-link span { margin-left: 10px; }
+.api-demo { align-items: center; border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); display: flex; justify-content: space-between; margin-top: 72px; padding: 35px 0; }
+.api-demo h2 { font-size: 2rem; }
+.api-demo pre { color: var(--muted); font-size: .75rem; margin: 14px 0 0; max-width: 340px; white-space: pre-wrap; }
+.testimonials { border-top: 1px solid var(--line); margin-top: 72px; padding-top: 35px; }
+.section-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 24px; }
+.section-heading h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+.testimonial-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+.testimonial { background: rgba(28, 32, 48, .72); border: 1px solid var(--line); padding: 24px; }
+.testimonial img { border-radius: 50%; height: 58px; object-fit: cover; width: 58px; }
+.testimonial p { font-family: "Playfair Display", serif; font-size: 1.15rem; line-height: 1.35; margin: 22px 0; }
+.testimonial span { color: var(--muted); font-size: .72rem; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-size: .72rem; justify-content: space-between; margin: 0 auto; max-width: 1176px; padding: 22px 0 30px; }
+.page-hero { border-bottom: 1px solid var(--line); padding: 70px 0 80px; }
+.page-hero h1 { font-size: clamp(3.5rem, 8vw, 7rem); }
+.page-intro { color: var(--muted); font-size: 1.05rem; max-width: 450px; }
+.content-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); padding-top: 24px; }
+.content-card { background: rgba(28, 32, 48, .72); border: 1px solid var(--line); min-height: 210px; padding: 24px; }
+.content-card h2 { font-size: 1.8rem; margin: 50px 0 8px; }
+.content-card p { color: var(--muted); font-size: .85rem; margin: 0; }
+.gallery { display: grid; gap: 14px; grid-template-columns: 1.4fr 1fr 1fr; padding-top: 24px; }
+.gallery img { height: 300px; object-fit: cover; width: 100%; }
+.calendar-wrap { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 30px; }
+.calendar-header { align-items: center; display: flex; justify-content: space-between; margin-bottom: 18px; }
+.calendar-header h2 { font-size: 2rem; }
+.calendar-nav { background: transparent; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; height: 34px; width: 34px; }
+.calendar { border-collapse: collapse; table-layout: fixed; width: 100%; }
+.calendar th { color: var(--muted); font-size: .7rem; font-weight: 500; padding: 10px; text-align: center; }
+.calendar td { padding: 4px; text-align: center; }
+.day { background: transparent; border: 1px solid transparent; border-radius: 50%; color: var(--ink); cursor: pointer; height: 38px; width: 38px; }
+.day:hover, .day.selected { background: #f58220; color: #171a27; }
+.day.unavailable { color: #b7bdb9; cursor: not-allowed; text-decoration: line-through; }
+.availability-note { color: var(--muted); font-size: .8rem; margin-top: 14px; }
+.service-card { align-items: center; display: flex; gap: 18px; min-height: 150px; padding: 18px; }
+.service-card img { height: 100px; object-fit: cover; width: 125px; }
+.service-card h2 { margin: 0 0 6px; }
+.signup-panel { background: rgba(28, 32, 48, .72); border: 1px solid var(--line); margin-top: 34px; max-width: 620px; padding: 30px; }
+.signup-form { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
+.signup-form label { color: var(--muted); display: grid; font-size: .75rem; gap: 7px; }
+.signup-form label:nth-child(3), .signup-form button { grid-column: 1 / -1; }
+.signup-form input { background: rgba(16, 19, 31, .75); border: 1px solid var(--line); color: var(--ink); font: inherit; padding: 12px; }
+.signup-form input:focus { border-color: #f58220; outline: 2px solid rgba(245, 130, 32, .25); }
+.signup-form button { cursor: pointer; justify-content: center; }
+@media (max-width: 720px) {
+    .site-header { flex-wrap: wrap; gap: 20px; padding: 22px 20px; }
+    .main-nav { gap: 14px; order: 3; width: 100%; }
+    .header-action, .header-signup { font-size: .7rem; padding: 9px 12px; }
+    main { padding: 35px 20px 70px; }
+    .hero { padding: 35px 0 70px; }
+    .feature-grid, .content-grid, .gallery, .testimonial-grid { grid-template-columns: 1fr; }
+    .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+    .gallery img { height: 220px; }
+    .signup-form { grid-template-columns: 1fr; }
+    .signup-form label:nth-child(3), .signup-form button { grid-column: auto; }
+    .api-demo { align-items: flex-start; flex-direction: column; gap: 24px; }
+    .site-footer { margin: 0 20px; }
+}
