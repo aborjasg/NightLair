@@ -84,10 +84,10 @@
                 <p class="eyebrow">Connected by Go</p>
                 <h2>See the experience in action.</h2>
             </div>
-            <!-- <div>
+            <div>
                 <button class="button button-primary" onclick="callApi()">Call API <span aria-hidden="true">→</span></button>
                 <pre id="result"></pre>
-            </div> -->
+            </div>
         </section>
     </main>
 
@@ -97,11 +97,22 @@
     </footer>
 
     <script>
-        // async function callApi() {
-        //     const response = await fetch("http://localhost:8080/api/hello");
-        //     const data = await response.json();
-        //     document.getElementById("result").textContent = JSON.stringify(data, null, 2);
-        // }
+        async function callApi() {
+            const result = document.getElementById("result");
+
+            try {
+                const response = await fetch("http://localhost:8080/api/prospects");
+                if (!response.ok) {
+                    throw new Error(`API request failed: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log("API response:", data);
+                result.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                result.textContent = error.message;
+            }
+        }
     </script>
 </body>
 </html>
